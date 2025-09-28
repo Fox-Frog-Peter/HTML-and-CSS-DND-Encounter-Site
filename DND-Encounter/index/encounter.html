@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encounter Page</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
+    <img src="../img/Logo.png" alt="Encounter Generator Logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="encounter.html">Encounter</a>
+      <a href="glossary.html">Glossary</a>
+      <button class="themeToggle">🌙</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="controls">
+      <h2>Generate an Encounter</h2>
+      
+      <label>Encounter Type:
+        <select id="typeSelect">
+          <option value="combat">Combat</option>
+          <option value="wildmagic">Wild Magic</option>
+          <option value="npc">Random NPC</option>
+          <option value="item">Random Item</option>
+          <option value="building">Random Building</option>
+        </select>
+      </label>
+
+      <div id="combatFields" class="conditional-fields">
+        <label>Biome:
+          <select id="biomeSelect">
+            <option value="forest">Forest</option>
+            <option value="tundra">Tundra</option>
+            <option value="desert">Desert</option>
+            <option value="mountain">Mountain</option>
+            <option value="underground">Underground</option>
+            <option value="grassland">Grassland</option>
+            <option value="hamlet">Hamlet</option>
+            <option value="town">Town</option>
+            <option value="city">City</option>
+            <option value="port">Port</option>
+          </select>
+        </label>
+        <label>Difficulty (CR):
+          <select id="crSelect">
+            <option value="0.125">1/8</option>
+            <option value="0.25">1/4</option>
+            <option value="0.5">1/2</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="4">4</option>
+            <option value="7">7</option>
+            <option value="10">10</option>
+          </select>
+        </label>
+      </div>
+
+      <button id="generateBtn">Generate Encounter</button>
+    </section>
+
+    <section id="results">
+      <h2>Encounter Results</h2>
+      <div id="encounterOutput"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Encounter Generator. All rights reserved.</p>
+  </footer>
+
+  <script src="../script/app.js"></script>
+  <script src="../script/theme.js"></script>
+</body>
+</html>
